@@ -30,7 +30,7 @@ import com.ruoyi.generator.service.IGenTableService;
 
 /**
  * 代码生成 操作处理
- * 
+ *
  * @author ruoyi
  */
 @RestController
@@ -82,6 +82,15 @@ public class GenController extends BaseController
         startPage();
         List<GenTable> list = genTableService.selectDbTableList(genTable);
         return getDataTable(list);
+    }
+
+    /**
+     * 查询数据表字段列表
+     */
+    @GetMapping(value = "/column/test")
+    public String testController()
+    {
+        return "success";
     }
 
     /**
